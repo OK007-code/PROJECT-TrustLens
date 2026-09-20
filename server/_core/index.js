@@ -1,4 +1,5 @@
 import "dotenv/config";
+import { exec } from "node:child_process";
 import express from "express";
 import { createServer } from "http";
 import net from "net";
@@ -46,12 +47,20 @@ async function startServer() {
         serveStatic(app);
     }
     const preferredPort = parseInt(process.env.PORT || "3000");
+    if (process.env.NODE_ENV === "development" && !(await isPortAvailable(preferredPort))) {
+        console.error(`Port ${preferredPort} is already in use. Stop the existing TrustLens dev server before running npm run dev again.`);
+        return;
+    }
     const port = await findAvailablePort(preferredPort);
     if (port !== preferredPort) {
         console.log(`Port ${preferredPort} is busy, using port ${port} instead`);
     }
     server.listen(port, () => {
-        console.log(`Server running on http://localhost:${port}/`);
+        const url = `http://localhost:${port}/`;
+        console.log(`Server running on ${url}`);
+        if (process.env.NODE_ENV === "development" && process.env.NO_BROWSER !== "1") {
+            exec(`start "" "${url}"`);
+        }
     });
 }
 startServer().catch(console.error);
