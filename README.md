@@ -1,4 +1,5 @@
 #🛡️ TrustLens
+Deployed link on Render- https://trustlens-phs9.onrender.com/
 > Detect manipulation before the user clicks pay.
 
 TrustLens is a browser-based safety assistant that helps users identify online manipulation, dark patterns, phishing attempts, scam websites, suspicious messages, and risky payment requests before they result in financial loss or privacy compromise.
