@@ -44,6 +44,22 @@ main { flex:1; }
 .text-link { display:inline-flex; align-items:center; gap:4px; color:var(--teal-dark); font-size:12px; font-weight:700; }
 .back-link { display:inline-flex; align-items:center; gap:6px; color:var(--muted); font-size:12px; margin-bottom:25px; }
 .back-link:hover { color:var(--navy); }
+.extension-page { padding-bottom:78px; }
+.extension-intro { max-width:820px; }
+.extension-hero-card { display:grid; grid-template-columns:auto minmax(0,1fr) 260px; align-items:center; gap:22px; margin-top:38px; padding:25px; border:1px solid var(--line); border-radius:17px; background:white; box-shadow:var(--shadow-sm); }
+.extension-hero-icon { width:52px; height:52px; display:grid; place-items:center; border-radius:14px; color:white; background:var(--navy); }
+.extension-hero-copy h2,.extension-section h2,.extension-controls h2 { margin:7px 0 8px; color:var(--navy); font:600 25px 'Space Grotesk',sans-serif; letter-spacing:-.04em; }
+.extension-hero-copy p { max-width:580px; margin:0; color:var(--muted); font-size:13px; line-height:1.6; }
+.extension-hero-actions { display:flex; flex-wrap:wrap; gap:9px; margin-top:17px; }
+.extension-preview { padding:16px; border-radius:12px; color:white; background:#102b42; box-shadow:0 13px 28px rgba(11,27,43,.18); }
+.extension-preview-top,.extension-preview-verdict,.extension-preview-scores { display:flex; align-items:center; justify-content:space-between; gap:10px; }
+.extension-preview-top { color:#fff; font:700 13px 'Space Grotesk',sans-serif; }.extension-preview-top span span { color:#73dfd0; }.extension-preview-top small { color:#9fe8de; font:9px 'DM Mono',monospace; }
+.extension-preview-verdict { margin-top:23px; font:600 15px 'Space Grotesk',sans-serif; }.extension-preview-verdict strong { display:grid; width:39px; height:39px; place-items:center; border:3px solid var(--red); border-radius:50%; font-size:13px; }
+.extension-preview-scores { gap:6px; margin-top:15px; }.extension-preview-scores span { flex:1; padding:7px; border-radius:6px; color:#b9cdd2; background:rgba(255,255,255,.1); font-size:9px; }.extension-preview-scores b { display:block; margin-top:2px; color:white; font-size:14px; }
+.extension-preview-line { margin-top:8px; padding:6px 7px; border-left:3px solid; border-radius:4px; color:#dbe8e8; background:rgba(255,255,255,.08); font-size:9px; }.extension-preview-line.amber { border-color:var(--amber); }.extension-preview-line.red { border-color:var(--red); }
+.extension-section { margin-top:63px; }.extension-step-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:13px; margin-top:22px; }.extension-step { min-height:205px; padding:19px; border:1px solid var(--line); border-radius:13px; background:white; }.extension-step-top { display:flex; justify-content:space-between; color:var(--teal-dark); }.extension-step-top span { font:10px 'DM Mono',monospace; }.extension-step h3 { margin:26px 0 7px; color:var(--navy); font:600 16px 'Space Grotesk',sans-serif; }.extension-step p { min-height:58px; margin:0 0 15px; color:var(--muted); font-size:11px; line-height:1.55; }.extension-step code { display:block; overflow-wrap:anywhere; padding:7px 8px; border-radius:6px; color:var(--teal-dark); background:#f0f8f7; font:10px 'DM Mono',monospace; }
+.extension-controls { display:grid; grid-template-columns:.8fr 1.2fr; gap:35px; align-items:start; margin-top:55px; padding:25px 0; border-top:1px solid var(--line); border-bottom:1px solid var(--line); }.extension-control-list { display:grid; gap:15px; }.extension-control-list div { display:flex; align-items:flex-start; gap:10px; color:var(--muted); font-size:12px; }.extension-control-list svg { flex:none; color:var(--teal); }.extension-control-list strong { color:var(--navy); }
+.extension-help { display:flex; gap:9px; margin-top:22px; padding:13px 15px; border-radius:10px; color:#657c87; background:#f1f9f8; font-size:11px; }.extension-help strong { color:var(--teal-dark); white-space:nowrap; }
 /* home */
 .hero { min-height:552px; padding-top:83px; display:grid; grid-template-columns:1.02fr .98fr; align-items:center; gap:56px; }
 .hero-copy { position:relative; z-index:2; }
