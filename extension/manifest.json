@@ -1,0 +1,20 @@
+{
+  "manifest_version": 3,
+  "name": "TrustLens — Scam & Dark Pattern Shield",
+  "version": "1.0.0",
+  "description": "Scan websites for scams, dark patterns, fake urgency, lookalike domains, and risky credential requests.",
+  "permissions": ["activeTab", "scripting", "storage"],
+  "host_permissions": ["<all_urls>"],
+  "action": {
+    "default_title": "Scan this page with TrustLens",
+    "default_popup": "popup.html"
+  },
+  "background": { "service_worker": "background.js" },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
